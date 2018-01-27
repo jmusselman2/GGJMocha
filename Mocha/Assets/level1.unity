@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 40727877}
   m_Layer: 1
   m_Name: Cliff
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,10 +259,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 40727876}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -284,7 +284,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 47951206}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &47951205
 GameObject:
@@ -311,13 +311,13 @@ Transform:
   m_LocalPosition: {x: -5, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 40727880}
   - {fileID: 683768156}
   - {fileID: 1324419655}
   - {fileID: 391419731}
   - {fileID: 2084231055}
   - {fileID: 1836147949}
   - {fileID: 2074368793}
+  - {fileID: 40727880}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -445,10 +445,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 154527739}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -713,10 +713,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 338242375}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -1011,7 +1011,7 @@ GameObject:
   - component: {fileID: 391419728}
   m_Layer: 1
   m_Name: Cliff (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1057,10 +1057,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 391419727}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -1082,7 +1082,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 47951206}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &399180219
 GameObject:
@@ -1143,10 +1143,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 399180219}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -1736,7 +1736,7 @@ GameObject:
   - component: {fileID: 683768153}
   m_Layer: 1
   m_Name: Cliff (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1782,10 +1782,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 683768152}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -1807,7 +1807,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 47951206}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &773488213
 GameObject:
@@ -1954,10 +1954,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 785360982}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -2597,7 +2597,7 @@ GameObject:
   - component: {fileID: 1098721820}
   m_Layer: 1
   m_Name: A3
-  m_TagString: Untagged
+  m_TagString: alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2615,6 +2615,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveNum: 0
   speed: 0
+  canMove: 0
+  hasControl: 0
 --- !u!23 &1098721821
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2656,10 +2658,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1098721819}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -2678,7 +2680,7 @@ Transform:
   m_GameObject: {fileID: 1098721819}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: -15, y: 15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 1, z: 0.9}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -3121,7 +3123,7 @@ GameObject:
   - component: {fileID: 1324419652}
   m_Layer: 1
   m_Name: Cliff (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3167,10 +3169,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1324419651}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -3192,7 +3194,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 47951206}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &1364775726
 GameObject:
@@ -3988,7 +3990,7 @@ GameObject:
   - component: {fileID: 1836147946}
   m_Layer: 1
   m_Name: Cliff (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4034,10 +4036,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1836147945}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -4059,7 +4061,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 47951206}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &1876458428
 GameObject:
@@ -4075,7 +4077,7 @@ GameObject:
   - component: {fileID: 1876458429}
   m_Layer: 1
   m_Name: A2
-  m_TagString: Untagged
+  m_TagString: alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4093,6 +4095,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveNum: 0
   speed: 0
+  canMove: 0
+  hasControl: 0
 --- !u!23 &1876458430
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4134,10 +4138,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1876458428}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -4156,7 +4160,7 @@ Transform:
   m_GameObject: {fileID: 1876458428}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 35, y: 35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 1, z: 0.9}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -4173,7 +4177,7 @@ GameObject:
   - component: {fileID: 1882328403}
   - component: {fileID: 1882328402}
   m_Layer: 1
-  m_Name: Cliff left (1)
+  m_Name: cliff right
   m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4220,10 +4224,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1882328401}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -4269,9 +4273,10 @@ GameObject:
   - component: {fileID: 1909788927}
   - component: {fileID: 1909788926}
   - component: {fileID: 1909788930}
+  - component: {fileID: 1909788931}
   m_Layer: 1
   m_Name: A1
-  m_TagString: Untagged
+  m_TagString: alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4317,10 +4322,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1909788925}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -4339,7 +4344,7 @@ Transform:
   m_GameObject: {fileID: 1909788925}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: -35, y: 45, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 1, z: 0.9}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -4357,6 +4362,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveNum: 10
   speed: 0
+  canMove: 0
+  hasControl: 1
+--- !u!54 &1909788931
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1909788925}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1945852005
 GameObject:
   m_ObjectHideFlags: 0
@@ -4714,7 +4736,7 @@ GameObject:
   - component: {fileID: 2074368790}
   m_Layer: 1
   m_Name: Cliff (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4760,10 +4782,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2074368789}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -4785,7 +4807,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 47951206}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &2084231051
 GameObject:
@@ -4800,7 +4822,7 @@ GameObject:
   - component: {fileID: 2084231052}
   m_Layer: 1
   m_Name: Cliff (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4846,10 +4868,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2084231051}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -4871,7 +4893,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 47951206}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &2122066130
 GameObject:
@@ -4887,7 +4909,7 @@ GameObject:
   - component: {fileID: 2122066131}
   m_Layer: 1
   m_Name: A4
-  m_TagString: Untagged
+  m_TagString: alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4905,6 +4927,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveNum: 0
   speed: 0
+  canMove: 0
+  hasControl: 0
 --- !u!23 &2122066132
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4946,10 +4970,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2122066130}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -4968,7 +4992,7 @@ Transform:
   m_GameObject: {fileID: 2122066130}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 25, y: -5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 1, z: 0.9}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
