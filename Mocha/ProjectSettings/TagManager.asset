@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - alien
+  - wall
+  - item
+  - thorn
   layers:
   - Default
   - TransparentFX

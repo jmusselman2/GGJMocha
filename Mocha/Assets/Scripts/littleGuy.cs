@@ -10,10 +10,10 @@ public class littleGuy: MonoBehaviour {
 	private Vector2 newPos;
 	private Vector2 currPos;
 	private Vector2 myPos;
-	public float fraction;
-	public float journeyLength;
-	public float startTime; 
-	public bool canMove; 
+	private float fraction;
+	private float journeyLength;
+	private float startTime; 
+	private bool canMove; 
 
 
 	// Use this for initialization
