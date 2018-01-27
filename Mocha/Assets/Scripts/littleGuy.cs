@@ -8,64 +8,90 @@ public class littleGuy: MonoBehaviour {
 	public float speed; 
 
 	private Vector2 newPos;
-	private bool canMove; 
+	private Vector2 currPos;
+	private Vector2 myPos;
+	public float fraction;
+	public float journeyLength;
+	public float startTime; 
+	public bool canMove; 
 
 
 	// Use this for initialization
 	void Start () {
 		moveNum = 10;
-		speed = 2;
+		speed = 10;
 		canMove = true;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		//Prevent player from moving before the units reach the end of their travel
 		if (canMove) {
-			if (Input.GetKeyUp (KeyCode.A)) {
-			//	MoveLeft ();
-				canMove = false;
-			} else if (Input.GetKeyUp (KeyCode.D)) {
-			//	MoveRight ();
-				canMove = false;
-			} else if (Input.GetKeyUp (KeyCode.S)) {
-			//	MoveDown ();
-				canMove = false;
-			} else if (Input.GetKeyUp (KeyCode.W)) {
-			//	MoveUp ();
-				canMove = false;
+			if (Input.GetKeyDown (KeyCode.A)) {
+				MoveLeft ();
+			} else if (Input.GetKeyDown (KeyCode.D)) {
+				MoveRight ();
+			} else if (Input.GetKeyDown (KeyCode.S)) {
+				MoveDown ();
+			} else if (Input.GetKeyDown (KeyCode.W)) {
+				MoveUp ();
+			}
+		} else {
+			if (fraction < 1) {
+				fraction = ((Time.time - startTime) * speed) / journeyLength;
+				transform.position = Vector2.Lerp (currPos, newPos, fraction);
+			}
+
+
+		    myPos = transform.position;
+			if (myPos == newPos) {
+				canMove = true;
 			}
 		}
 
 	}
 
-	void MoveLeft(Vector2 currPos)
+	void MoveLeft()
 	{
+		currPos = transform.position;
 		newPos = new Vector2 (transform.position.x - moveNum, transform.position.y);
-		transform.position = Vector2.Lerp (currPos, newPos, 10f);
+		journeyLength = Vector2.Distance (currPos, newPos);
+		startTime = Time.time;
+		fraction = 0;
+		canMove = false;
 	}
 
-	void MoveRight(Vector2 currPos)
+	void MoveRight()
 	{
+		currPos = transform.position;
 		newPos = new Vector2 (transform.position.x + moveNum, transform.position.y);
-		transform.position = Vector2.Lerp (currPos, newPos, 10f);
+		journeyLength = Vector2.Distance (currPos, newPos);
+		startTime = Time.time;
+		fraction = 0;
+		canMove = false;
 	}
 
-	void MoveUp(Vector2 currPos)
+	void MoveUp()
 	{
+		currPos = transform.position;
 		newPos = new Vector2 (transform.position.x, transform.position.y + moveNum);
-		transform.position = Vector2.Lerp (currPos, newPos, 10f);
+		journeyLength = Vector2.Distance (currPos, newPos);
+		startTime = Time.time;
+		fraction = 0;
+		canMove = false;
 	}
 
-	void MoveDown(Vector2 currPos)
+	void MoveDown()
 	{
+		currPos = transform.position;
 		newPos = new Vector2 (transform.position.x, transform.position.y - moveNum);
-		transform.position = Vector2.Lerp (currPos, newPos, 10f);
+		journeyLength = Vector2.Distance (currPos, newPos);
+		startTime = Time.time;
+		fraction = 0;
+		canMove = false;
 	}
 
-	Vector2 SetStart()
-	{
-		return transform.position;
-	}
+
 
 }
