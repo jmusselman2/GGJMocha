@@ -46,8 +46,8 @@ Icon?
 ehthumbs.db
 [Tt]humbs.db
 [Dd]esktop.ini
-Corridor/Library/ShaderCache/
-Corridor/Library/metadata/
+*Corridor/Library/ShaderCache/*
+*Corridor/Library/metadata/*
 
 
 
@@ -69,35 +69,35 @@ Temp
 *.pyc
 
 # library trashable
-Library/cache/*
-Library/shadercache/*
-Library/metadata/*
-Library/previews/*
-Library/ScriptAssemblies/*
-Library/*.log
-Library/ShaderCache.db
-Library/ShaderCache
-Library/shadercompiler-1.log
+*/Library/cache/*
+*/Library/shadercache/*
+*/Library/metadata/*
+*/Library/previews/*
+*/Library/ScriptAssemblies/*
+*/Library/*.log
+*/Library/ShaderCache.db
+*/Library/ShaderCache
+*/Library/shadercompiler-1.log
 
 # various
-AnnotationManager
-AssetImportState
-AssetServerCacheV3
-AssetVersioning.db
-AudioManager.asset
-BuildPlayer.prefs
-BuildSettings.asset
-CurrentLayout.dwlt
-CurrentMaximizeLayout.dwlt
-DynamicsManager.asset
-EditorUserBuildSettings.asset
-FailedAssetImports.txt
-InspectorExpandedItems.asset
-MonoManager.asset
-NetworkManager.asset
-ScriptMapper
-assetDatabase3
-assetservercachev3
-expandedItems
-guidmapper
-CurrentMaximizeLayout.dwlt
+*/AnnotationManager
+*/AssetImportState
+*/AssetServerCacheV3
+*/AssetVersioning.db
+*/AudioManager.asset
+*/BuildPlayer.prefs
+*/BuildSettings.asset
+*/CurrentLayout.dwlt
+*/CurrentMaximizeLayout.dwlt
+*/DynamicsManager.asset
+*/EditorUserBuildSettings.asset
+*/FailedAssetImports.txt
+*/InspectorExpandedItems.asset
+*/MonoManager.asset
+*/NetworkManager.asset
+*/ScriptMapper
+*/assetDatabase3
+*/assetservercachev3
+*/expandedItems
+*/guidmapper
+*/CurrentMaximizeLayout.dwlt
