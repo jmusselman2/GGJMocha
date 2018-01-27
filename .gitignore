@@ -87,7 +87,6 @@ Temp
 */AudioManager.asset
 */BuildPlayer.prefs
 */BuildSettings.asset
-*/CurrentLayout.dwlt
 */CurrentMaximizeLayout.dwlt
 */DynamicsManager.asset
 */EditorUserBuildSettings.asset
@@ -101,3 +100,10 @@ Temp
 */expandedItems
 */guidmapper
 */CurrentMaximizeLayout.dwlt
+
+CurrentLayout.dwlt
+*CurrentLayout.dwlt
+*/CurrentLayout.dwlt
+
+CurrentLayout
+*CurrentLayout*
