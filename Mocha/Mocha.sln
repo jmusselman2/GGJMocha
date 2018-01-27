@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mocha", "Mocha.csproj", "{CD4B2555-27C3-F1AF-993D-42E0054F5ADB}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mocha", "Assembly-CSharp.csproj", "{41201F6E-0072-1D32-9F62-E86F6827CA6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CD4B2555-27C3-F1AF-993D-42E0054F5ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD4B2555-27C3-F1AF-993D-42E0054F5ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD4B2555-27C3-F1AF-993D-42E0054F5ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD4B2555-27C3-F1AF-993D-42E0054F5ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41201F6E-0072-1D32-9F62-E86F6827CA6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41201F6E-0072-1D32-9F62-E86F6827CA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41201F6E-0072-1D32-9F62-E86F6827CA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41201F6E-0072-1D32-9F62-E86F6827CA6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
