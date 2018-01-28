@@ -3206,7 +3206,7 @@ Animator:
   m_GameObject: {fileID: 556419914}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e23bed74b66a4f14fbfc70912e8d2c42, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1a2d4e04b85930e40a42923ffbbeb79c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8856,6 +8856,10 @@ MonoBehaviour:
   winTiles:
   - {fileID: 2066328539}
   - {fileID: 1743755290}
+  dudes:
+  - {fileID: 556419914}
+  - {fileID: 646359994}
+  anims: []
   hasWon: 0
 --- !u!4 &1653952320
 Transform:

@@ -5,6 +5,9 @@ using UnityEngine;
 public class wincondition : MonoBehaviour {
 
 	public GameObject[] winTiles;
+	public GameObject[] dudes;
+	public Animator[] anims;
+
 	private wintile winTile;
 	private bool[] boolArray;
 
@@ -13,6 +16,9 @@ public class wincondition : MonoBehaviour {
 	void Start () {
 		boolArray = new bool[winTiles.Length];
 		hasWon = false;
+
+		anims = new Animator[dudes.Length];
+		GetAnimators();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +26,11 @@ public class wincondition : MonoBehaviour {
 		if (checkWinState (getWinState())) {
 			hasWon = true;
 			Debug.Log ("level won");
+
+			foreach (var anim in anims) {
+				Debug.Log("play Happy Hop");
+				anim.Play("Happy Hop");
+			}
 		}
 	}
 
@@ -42,5 +53,9 @@ public class wincondition : MonoBehaviour {
 		return true;
 	}
 
-
+	void GetAnimators() {
+		for (int i = 0; i < dudes.Length; i++) {
+			anims[i] = dudes[i].GetComponent<Animator>();
+		}
+	}
 }

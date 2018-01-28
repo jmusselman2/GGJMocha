@@ -168,7 +168,7 @@ Animator:
   m_GameObject: {fileID: 21161814}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e23bed74b66a4f14fbfc70912e8d2c42, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1a2d4e04b85930e40a42923ffbbeb79c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9649,6 +9649,12 @@ MonoBehaviour:
   - {fileID: 1363331790}
   - {fileID: 852805598}
   - {fileID: 1828815706}
+  dudes:
+  - {fileID: 21161814}
+  - {fileID: 991396922}
+  - {fileID: 1563606996}
+  - {fileID: 194214244}
+  anims: []
   hasWon: 0
 --- !u!4 &1415517255
 Transform:
