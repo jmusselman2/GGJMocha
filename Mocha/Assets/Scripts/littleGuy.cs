@@ -162,7 +162,7 @@ public class littleGuy : MonoBehaviour {
 				newPos = midPos;
 			}
 			else {
-				Debug.Log ("Reset Loc Failed");
+				//Debug.Log ("Reset Loc Failed");
 				//transform.position = new Vector2 (Mathf.Round (transform.position.x), Mathf.Round (transform.position.y));
 			}
 			currPos = transform.position;
@@ -219,7 +219,7 @@ public class littleGuy : MonoBehaviour {
 
 	void alienCollision (RaycastHit2D hit)
 	{
-		Debug.Log (gameObject.name + " detects " + hit.collider.gameObject.name);
+		//Debug.Log (gameObject.name + " detects " + hit.collider.gameObject.name);
 			
 		if (hit.collider.gameObject.tag == "alien") {
 			otherAlien = hit.collider.gameObject.GetComponent<littleGuy> ();
