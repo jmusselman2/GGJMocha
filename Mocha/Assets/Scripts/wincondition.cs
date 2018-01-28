@@ -9,6 +9,7 @@ public class wincondition : MonoBehaviour {
 	public Animator[] anims;
 
 	private wintile winTile;
+	private GameObject[] aliens; 
 	private bool[] boolArray;
 
 	public bool hasWon;
@@ -18,29 +19,53 @@ public class wincondition : MonoBehaviour {
 		hasWon = false;
 
 		anims = new Animator[dudes.Length];
+		aliens = new GameObject[winTiles.Length];
 		GetAnimators();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (checkWinState (getWinState())) {
+		if (getWinState()) {
 			hasWon = true;
-			Debug.Log ("level won");
+			//Debug.Log ("level won");
 
 			foreach (var anim in anims) {
-				Debug.Log("play Happy Hop");
+				//Debug.Log("play Happy Hop");
 				anim.Play("Happy Hop");
 			}
 		}
 	}
 
-	bool[] getWinState()
+	bool getWinState()
 	{
 		for (int i = 0; i < winTiles.Length; i++) {
 			winTile = winTiles [i].GetComponent<wintile> ();
-			boolArray[i] = winTile.isAlien;
+			if (winTile.alien != null) {
+				aliens [i] = winTile.alien;
+			} else {
+				aliens [i] = null;
+			}
+
+			//if(winTile.alien.name 
+
+			//boolArray[i] = winTile.isWin;
 		}
-		return boolArray;
+
+		for (int i = 0; i < aliens.Length; i++) {
+
+			if (aliens [i] == null) {
+				return false;
+			}
+			for (int j = i+1; j < aliens.Length; j++) {
+				if (aliens [j] == null) {
+					return false;
+				}
+				if (aliens [i].name == aliens [j].name) {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 
 	bool checkWinState(bool[] winState)
@@ -52,10 +77,13 @@ public class wincondition : MonoBehaviour {
 		}
 		return true;
 	}
+		
 
 	void GetAnimators() {
 		for (int i = 0; i < dudes.Length; i++) {
 			anims[i] = dudes[i].GetComponent<Animator>();
 		}
 	}
+			
+	
 }

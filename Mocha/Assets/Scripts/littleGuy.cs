@@ -100,8 +100,10 @@ public class littleGuy : MonoBehaviour {
 				if (fraction < 1) {
 					fraction = ((Time.time - startTime) * speed) / journeyLength;
 					transform.position = Vector2.Lerp (currPos, newPos, fraction);
+					if (gameObject.name == "A1") {
+						playWalkingSound();
+					}
 
-					playWalkingSound();
 					
 
 				}

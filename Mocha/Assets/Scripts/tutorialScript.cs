@@ -25,7 +25,7 @@ public class tutorialScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (triggers [0].isArea) {
-			text.text = "Oh No! You've crash landed on a deserted planet! \n It looks like your friend needs to be woken up. \n Use WASD to move to your friend.";
+			text.text = "Oh No! You've crash landed on a deserted planet! \n It looks like your friend needs to be woken up. \n Use WASD or a controller to move to your friend.";
 		} else if (triggers [1].isArea) {
 			text.text = "Now that everyone is awake, you can get to the escape pods! \n Make sure that each bot gets its own one!"; 
 		} else if (winCondition.hasWon) {
