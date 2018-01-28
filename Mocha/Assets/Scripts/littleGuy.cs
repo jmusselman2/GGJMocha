@@ -150,7 +150,7 @@ public class littleGuy : MonoBehaviour {
 		anim.Play("FrontWalking");
 	}
 
-	void OnTriggerEnter(Collider other)
+	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "wall" || other.gameObject.tag == "alien") {
 			//Debug.Log (other.gameObject.tag);
@@ -184,30 +184,43 @@ public class littleGuy : MonoBehaviour {
 	void activateAlien()
 	{
 		RaycastHit hit;
+		//Debug.DrawRay (transform.position, transform.right * 8.0f, Color.green);
+
 		Debug.DrawRay (transform.position, transform.right * 8.0f, Color.green);
 
 		var layerMask = (1 << 8);
 
-		if (Physics.Raycast (transform.position, Vector3.left, out hit, 8.0f, layerMask, QueryTriggerInteraction.Collide)) {
-			alienCollision (hit);
 
-		}
-		if (Physics.Raycast (transform.position, Vector3.right, out hit, 8.0f, layerMask, QueryTriggerInteraction.Collide)) {
-			alienCollision (hit);
-		
-		}
-		if (Physics.Raycast (transform.position, Vector3.forward, out hit, 8.0f, layerMask, QueryTriggerInteraction.Collide)) {
-			alienCollision (hit);
 
+
+
+
+
+		RaycastHit2D leftHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y), Vector2.left, 6.0f, layerMask);
+		RaycastHit2D rightHit = Physics2D.Raycast (new Vector2(transform.position.x, transform.position.y), Vector2.right, 6.0f, layerMask);
+		RaycastHit2D upHit = Physics2D.Raycast (new Vector2(transform.position.x, transform.position.y), Vector2.up, 6.0f, layerMask);
+		RaycastHit2D downHit = Physics2D.Raycast (new Vector2(transform.position.x, transform.position.y), Vector2.down, 6.0f, layerMask);
+
+		if (leftHit.collider != null) {
+			alienCollision (leftHit);
 		}
-		if (Physics.Raycast (transform.position, Vector3.back, out hit, 8.0f, layerMask, QueryTriggerInteraction.Collide)) {
-			alienCollision (hit);
+		if (rightHit.collider != null) {
+			alienCollision (rightHit);
 		}
+		if (upHit.collider != null) {
+			alienCollision (upHit);
+		}
+		if (downHit.collider != null) {
+			alienCollision (downHit);
+		}
+
+
 	}
 
-	void alienCollision (RaycastHit hit)
+	void alienCollision (RaycastHit2D hit)
 	{
-		Debug.Log (hit.collider.name);
+		Debug.Log (gameObject.name + " detects " + hit.collider.gameObject.name);
+			
 		if (hit.collider.gameObject.tag == "alien") {
 			otherAlien = hit.collider.gameObject.GetComponent<littleGuy> ();
 			otherAlien.hasControl = true;
