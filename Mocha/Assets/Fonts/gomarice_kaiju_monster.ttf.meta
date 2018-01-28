@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f4e4c463a458f484e85ab7bc736bc919
+timeCreated: 1517120274
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Kaiju Monster__G
+  fontNames:
+  - Kaiju Monster__G
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
