@@ -206,12 +206,6 @@ public class littleGuy : MonoBehaviour {
 
 		var layerMask = (1 << 8);
 
-
-
-
-
-
-
 		RaycastHit2D leftHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y), Vector2.left, 6.0f, layerMask);
 		RaycastHit2D rightHit = Physics2D.Raycast (new Vector2(transform.position.x, transform.position.y), Vector2.right, 6.0f, layerMask);
 		RaycastHit2D upHit = Physics2D.Raycast (new Vector2(transform.position.x, transform.position.y), Vector2.up, 6.0f, layerMask);
@@ -229,21 +223,22 @@ public class littleGuy : MonoBehaviour {
 		if (downHit.collider != null) {
 			alienCollision (downHit);
 		}
-
-
 	}
 
 	void alienCollision (RaycastHit2D hit)
 	{
 		//Debug.Log (gameObject.name + " detects " + hit.collider.gameObject.name);
-			
+
 		if (hit.collider.gameObject.tag == "alien") {
 			otherAlien = hit.collider.gameObject.GetComponent<littleGuy> ();
-			if (!otherAlien.hasControl) {
+			if (!otherAlien.hasControl)
+			{
+				Animator otherDude = hit.collider.gameObject.GetComponent<Animator>();
+				otherDude.Play("Get Up");
+
 				source.PlayOneShot (transmission);
 				otherAlien.hasControl = true;
 			}
-
 		}
 	}
 
@@ -252,10 +247,7 @@ public class littleGuy : MonoBehaviour {
 		if (!source.isPlaying) {
 			random = Random.Range (0, 3);
 			source.PlayOneShot (walkingAudio [random]);
-
-		
 		}
-
 	}
 
 }
