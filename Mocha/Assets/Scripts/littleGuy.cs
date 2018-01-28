@@ -103,9 +103,6 @@ public class littleGuy : MonoBehaviour {
 					if (gameObject.name == "A1") {
 						playWalkingSound();
 					}
-
-					
-
 				}
 
 				myPos = transform.position;
@@ -171,18 +168,15 @@ public class littleGuy : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "wall" || other.gameObject.tag == "alien") {
-			//Debug.Log (other.gameObject.tag);
 			myPos = transform.position;
+			
 			if (compareVector (myPos, currPos)) {
 				newPos = currPos;
 			}
 			else if (compareVector (myPos, midPos)) {
 				newPos = midPos;
 			}
-			else {
-				//Debug.Log ("Reset Loc Failed");
-				//transform.position = new Vector2 (Mathf.Round (transform.position.x), Mathf.Round (transform.position.y));
-			}
+
 			currPos = transform.position;
 		}
 	}
@@ -202,9 +196,6 @@ public class littleGuy : MonoBehaviour {
 	void activateAlien()
 	{
 		RaycastHit hit;
-		//Debug.DrawRay (transform.position, transform.right * 8.0f, Color.green);
-
-		Debug.DrawRay (transform.position, transform.right * 8.0f, Color.green);
 
 		var layerMask = (1 << 8);
 
@@ -229,12 +220,14 @@ public class littleGuy : MonoBehaviour {
 
 	void alienCollision (RaycastHit2D hit)
 	{
-		//Debug.Log (gameObject.name + " detects " + hit.collider.gameObject.name);
-
 		if (hit.collider.gameObject.tag == "alien") {
 			otherAlien = hit.collider.gameObject.GetComponent<littleGuy> ();
 			if (!otherAlien.hasControl)
 			{
+				Transform wave = this.gameObject.transform.GetChild(0);
+				Animator waveComponent = wave.GetComponent<Animator>();
+				waveComponent.Play("Waves");
+
 				Animator otherDude = hit.collider.gameObject.GetComponent<Animator>();
 				otherDude.Play("Get Up");
 
