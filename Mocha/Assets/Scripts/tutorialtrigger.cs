@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class wintile : MonoBehaviour {
+public class tutorialtrigger : MonoBehaviour {
 
-	public bool isAlien; 
+	public bool isArea;
 
 	// Use this for initialization
 	void Start () {
-		isAlien = false;
+		isArea = false;
 	}
 	
 	// Update is called once per frame
@@ -18,15 +18,17 @@ public class wintile : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.tag == "alien") {
-			isAlien = true;
+		if (other.gameObject.name == "A1") {
+			isArea = true;
 		}
 	}
-	void OnTriggerExit2D (Collider2D other)
+
+	void OnTriggerExit2D(Collider2D other)
 	{
-		if (other.gameObject.tag == "alien") {
-			isAlien = false;
+		if (other.gameObject.name == "A1") {
+			isArea = false;
 		}
+		
 	}
 
 }

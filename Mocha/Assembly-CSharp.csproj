@@ -53,6 +53,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\littleGuy.cs" />
+     <Compile Include="Assets\Scripts\tutorialScript.cs" />
+     <Compile Include="Assets\Scripts\tutorialtrigger.cs" />
      <Compile Include="Assets\Scripts\wincondition.cs" />
      <Compile Include="Assets\Scripts\wintile.cs" />
  <Reference Include="UnityEngine.UI">

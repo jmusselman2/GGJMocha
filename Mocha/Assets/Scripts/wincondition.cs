@@ -7,14 +7,18 @@ public class wincondition : MonoBehaviour {
 	public GameObject[] winTiles;
 	private wintile winTile;
 	private bool[] boolArray;
+
+	public bool hasWon;
 	// Use this for initialization
 	void Start () {
-		boolArray = new bool[4];
+		boolArray = new bool[winTiles.Length];
+		hasWon = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (checkWinState (getWinState())) {
+			hasWon = true;
 			Debug.Log ("level won");
 		}
 	}
