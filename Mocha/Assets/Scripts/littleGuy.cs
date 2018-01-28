@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class littleGuy : MonoBehaviour {
 
@@ -94,6 +95,9 @@ public class littleGuy : MonoBehaviour {
 				}
 				else if (Input.GetKeyDown(KeyCode.W )|| Input.GetAxis("Joy Y") > 0) {
 					MoveUp();
+				}
+				else if (Input.GetKey(KeyCode.Escape)) {
+					SceneManager.LoadScene("Start");
 				}
 			}
 			else {
