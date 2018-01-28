@@ -82,18 +82,18 @@ public class littleGuy : MonoBehaviour {
 				}
 
 				// Player input 
-				if (Input.GetKeyDown (KeyCode.A) || Input.GetAxis("Joy X") < 0) {
+				if (Input.GetKeyDown (KeyCode.A) || Input.GetAxis("Joy X") < 0 || Input.GetKey ("left")) {
 					MoveLeft();
 
 				}
-				else if (Input.GetKeyDown(KeyCode.D) || Input.GetAxis("Joy X") > 0) {
+				else if (Input.GetKeyDown(KeyCode.D) || Input.GetAxis("Joy X") > 0 || Input.GetKey ("right")) {
 					MoveRight();
 
 				}
-				else if (Input.GetKeyDown(KeyCode.S) || Input.GetAxis("Joy Y") < 0) {
+				else if (Input.GetKeyDown(KeyCode.S) || Input.GetAxis("Joy Y") < 0 || Input.GetKey ("down")) {
 					MoveDown();
 				}
-				else if (Input.GetKeyDown(KeyCode.W )|| Input.GetAxis("Joy Y") > 0) {
+				else if (Input.GetKeyDown(KeyCode.W )|| Input.GetAxis("Joy Y") > 0 || Input.GetKey ("up")) {
 					MoveUp();
 				}
 				else if (Input.GetKey(KeyCode.Escape)) {
