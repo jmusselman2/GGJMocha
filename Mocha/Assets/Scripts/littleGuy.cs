@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class littleGuy: MonoBehaviour {
+public class littleGuy : MonoBehaviour {
 
-	public int moveNum; 
-	public float speed; 
+	public Animator anim;
+	public int moveNum;
+	public float speed;
 
-
-	//Movement Variables
+	// Movement Variables
 	private Vector2 newPos;
 	private Vector2 currPos;
 	private Vector2 myPos;
@@ -18,10 +18,10 @@ public class littleGuy: MonoBehaviour {
 	private float startTime; 
 	public bool canMove; 
 
-	//control variables
+	// control variables
 	public bool hasControl;
 
-	//Collision Variables 
+	// Collision Variables 
 	private littleGuy otherAlien; 
 	public bool setControl;
 
@@ -31,57 +31,64 @@ public class littleGuy: MonoBehaviour {
 		speed = 20;
 		canMove = true;
 		setControl = false;
-
+		anim = GetComponent<Animator>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		//only move if the player has control of the unit 
-		if (hasControl) {
-			//always check for activating alien
-			activateAlien();
-			//Prevent player from moving before the units reach the end of their travel
-			if (canMove) {
-				//makes sure that the aliens stay on the grid
 
+		// Only move if the player has control of the unit 
+		if (hasControl) {
+
+			// Always check for activating alien
+			activateAlien();
+
+			// Prevent player from moving before the units reach the end of their travel
+			if (canMove) {
+
+				// Makes sure that the aliens stay on the grid
 				if (transform.position.x % 5 != 0) {
 					float newX = Mathf.Round(transform.position.x);
 					if ((Mathf.Round(transform.position.x) - 1) % 5 == 0) {
 						newX = Mathf.Round (transform.position.x - 1);
-					} else if ((Mathf.Round(transform.position.x) + 1) % 5 == 0) {
+					}
+					else if ((Mathf.Round(transform.position.x) + 1) % 5 == 0) {
 						newX = Mathf.Round (transform.position.x + 1);
 					}
 					transform.position = new Vector2 (newX, transform.position.y);
-
 				}
 
 				if (transform.position.y % 5 != 0) {
 					float newY = Mathf.Round (transform.position.y);
 					if ((Mathf.Round (transform.position.y) - 1) % 5 == 0) {
 						newY = Mathf.Round (transform.position.y - 1);
-					} else if ((Mathf.Round (transform.position.y) + 1) % 5 == 0) {
+					}
+					else if ((Mathf.Round (transform.position.y) + 1) % 5 == 0) {
 						newY = Mathf.Round (transform.position.y + 1);
 					}
+
 					transform.position = new Vector2 (transform.position.x, newY);
 				}
 
-
-				//player input 
+				// Player input 
 				if (Input.GetKeyDown (KeyCode.A)) {
-					MoveLeft ();
-				} else if (Input.GetKeyDown (KeyCode.D)) {
-					MoveRight ();
-				} else if (Input.GetKeyDown (KeyCode.S)) {
-					MoveDown ();
-				} else if (Input.GetKeyDown (KeyCode.W)) {
-					MoveUp ();
+					MoveLeft();
 				}
-			} else {
+				else if (Input.GetKeyDown(KeyCode.D)) {
+					MoveRight();
+				}
+				else if (Input.GetKeyDown(KeyCode.S)) {
+					MoveDown();
+				}
+				else if (Input.GetKeyDown(KeyCode.W)) {
+					MoveUp();
+				}
+			}
+			else {
 				if (fraction < 1) {
 					fraction = ((Time.time - startTime) * speed) / journeyLength;
 					transform.position = Vector2.Lerp (currPos, newPos, fraction);
 				}
-
 
 				myPos = transform.position;
 				if (myPos == newPos) {
@@ -89,7 +96,6 @@ public class littleGuy: MonoBehaviour {
 				}
 			}
 		}
-			
 	}
 
 	void MoveLeft()
@@ -101,6 +107,8 @@ public class littleGuy: MonoBehaviour {
 		startTime = Time.time;
 		fraction = 0;
 		canMove = false;
+
+		anim.Play("LeftWalking");
 	}
 
 	void MoveRight()
@@ -112,6 +120,8 @@ public class littleGuy: MonoBehaviour {
 		startTime = Time.time;
 		fraction = 0;
 		canMove = false;
+
+		anim.Play("RightWalking");
 	}
 
 	void MoveUp()
@@ -123,6 +133,8 @@ public class littleGuy: MonoBehaviour {
 		startTime = Time.time;
 		fraction = 0;
 		canMove = false;
+
+		anim.Play("BackWalking");
 	}
 
 	void MoveDown()
@@ -134,8 +146,9 @@ public class littleGuy: MonoBehaviour {
 		startTime = Time.time;
 		fraction = 0;
 		canMove = false;
-	}
 
+		anim.Play("FrontWalking");
+	}
 
 	void OnTriggerEnter(Collider other)
 	{
@@ -144,15 +157,16 @@ public class littleGuy: MonoBehaviour {
 			myPos = transform.position;
 			if (compareVector (myPos, currPos)) {
 				newPos = currPos;
-			} else if (compareVector (myPos, midPos)) {
+			}
+			else if (compareVector (myPos, midPos)) {
 				newPos = midPos;
-			} else {
+			}
+			else {
 				Debug.Log ("Reset Loc Failed");
 				//transform.position = new Vector2 (Mathf.Round (transform.position.x), Mathf.Round (transform.position.y));
 			}
 			currPos = transform.position;
 		}
-
 	}
 
 	bool compareVector(Vector2 v1, Vector2 v2)
@@ -162,9 +176,9 @@ public class littleGuy: MonoBehaviour {
 
 		if (xDif < 5 && yDif < 5) {
 			return true;
-		} 
-		return false;
+		}
 
+		return false;
 	}
 
 	void activateAlien()
@@ -177,15 +191,15 @@ public class littleGuy: MonoBehaviour {
 		if (Physics.Raycast (transform.position, Vector3.left, out hit, 8.0f, layerMask, QueryTriggerInteraction.Collide)) {
 			alienCollision (hit);
 
-		} 
+		}
 		if (Physics.Raycast (transform.position, Vector3.right, out hit, 8.0f, layerMask, QueryTriggerInteraction.Collide)) {
 			alienCollision (hit);
 		
-		} 
+		}
 		if (Physics.Raycast (transform.position, Vector3.forward, out hit, 8.0f, layerMask, QueryTriggerInteraction.Collide)) {
 			alienCollision (hit);
 
-		} 
+		}
 		if (Physics.Raycast (transform.position, Vector3.back, out hit, 8.0f, layerMask, QueryTriggerInteraction.Collide)) {
 			alienCollision (hit);
 		}
@@ -199,6 +213,5 @@ public class littleGuy: MonoBehaviour {
 			otherAlien.hasControl = true;
 		}
 	}
-
 
 }
