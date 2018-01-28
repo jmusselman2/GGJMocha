@@ -25,6 +25,13 @@ public class littleGuy : MonoBehaviour {
 	private littleGuy otherAlien; 
 	public bool setControl;
 
+	//audio variables
+	public AudioClip[] walkingAudio;
+	public AudioClip transmission;
+	AudioSource source;
+	int random;
+	public float clipLength;
+
 	// Use this for initialization
 	void Start () {
 		moveNum = 20;
@@ -32,6 +39,9 @@ public class littleGuy : MonoBehaviour {
 		canMove = true;
 		setControl = false;
 		anim = GetComponent<Animator>();
+
+		source = GetComponent<AudioSource> ();
+		random = 0;
 	}
 
 	// Update is called once per frame
@@ -73,9 +83,11 @@ public class littleGuy : MonoBehaviour {
 				// Player input 
 				if (Input.GetKeyDown (KeyCode.A) || Input.GetAxis("Joy X") < 0) {
 					MoveLeft();
+
 				}
 				else if (Input.GetKeyDown(KeyCode.D) || Input.GetAxis("Joy X") > 0) {
 					MoveRight();
+
 				}
 				else if (Input.GetKeyDown(KeyCode.S) || Input.GetAxis("Joy Y") < 0) {
 					MoveDown();
@@ -88,6 +100,10 @@ public class littleGuy : MonoBehaviour {
 				if (fraction < 1) {
 					fraction = ((Time.time - startTime) * speed) / journeyLength;
 					transform.position = Vector2.Lerp (currPos, newPos, fraction);
+
+					playWalkingSound();
+					
+
 				}
 
 				myPos = transform.position;
@@ -223,8 +239,23 @@ public class littleGuy : MonoBehaviour {
 			
 		if (hit.collider.gameObject.tag == "alien") {
 			otherAlien = hit.collider.gameObject.GetComponent<littleGuy> ();
-			otherAlien.hasControl = true;
+			if (!otherAlien.hasControl) {
+				source.PlayOneShot (transmission);
+				otherAlien.hasControl = true;
+			}
+
 		}
+	}
+
+	void playWalkingSound()
+	{
+		if (!source.isPlaying) {
+			random = Random.Range (0, 3);
+			source.PlayOneShot (walkingAudio [random]);
+
+		
+		}
+
 	}
 
 }
