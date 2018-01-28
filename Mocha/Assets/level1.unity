@@ -232,7 +232,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42d6593109565634bb1c2ae1a74264c9, type: 2}
+  - {fileID: 2100000, guid: 67365dd413280e64da1f4941a3720577, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -280,10 +280,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 40727876}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -30, y: 22, z: 0}
+  m_LocalPosition: {x: -35, y: 25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 47951206}
+  m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &47951205
@@ -317,9 +317,8 @@ Transform:
   - {fileID: 2084231055}
   - {fileID: 1836147949}
   - {fileID: 2074368793}
-  - {fileID: 40727880}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &60432596
 GameObject:
@@ -384,7 +383,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &154527739
 GameObject:
@@ -480,7 +479,7 @@ Transform:
   - {fileID: 2004398176}
   - {fileID: 425625108}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &303321941
 GameObject:
@@ -514,7 +513,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 378ae2cff33357d47b42e32300c89300, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -581,7 +580,7 @@ GameObject:
   - component: {fileID: 305367438}
   m_Layer: 1
   m_Name: cliff top1 (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -812,10 +811,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 348614374}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -898,10 +897,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 380532563}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -1030,7 +1029,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42d6593109565634bb1c2ae1a74264c9, type: 2}
+  - {fileID: 2100000, guid: 67365dd413280e64da1f4941a3720577, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1242,10 +1241,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 425625107}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -1347,7 +1346,7 @@ Transform:
   - {fileID: 1273728149}
   - {fileID: 1364775727}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &619230930
 GameObject:
@@ -1377,7 +1376,7 @@ Transform:
   - {fileID: 399180223}
   - {fileID: 338242379}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &638234158
 GameObject:
@@ -1537,10 +1536,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 646962793}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -1650,7 +1649,7 @@ GameObject:
   - component: {fileID: 663088342}
   m_Layer: 1
   m_Name: cliff top1 (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1755,7 +1754,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42d6593109565634bb1c2ae1a74264c9, type: 2}
+  - {fileID: 2100000, guid: 67365dd413280e64da1f4941a3720577, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1822,7 +1821,7 @@ GameObject:
   - component: {fileID: 773488215}
   m_Layer: 1
   m_Name: cliff top1 (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1979,7 +1978,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &807226268
 GameObject:
@@ -1994,7 +1993,7 @@ GameObject:
   - component: {fileID: 807226270}
   m_Layer: 1
   m_Name: cliff top1 (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2080,7 +2079,7 @@ GameObject:
   - component: {fileID: 819173445}
   m_Layer: 1
   m_Name: cliff top1 (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2252,7 +2251,7 @@ GameObject:
   - component: {fileID: 868593630}
   m_Layer: 1
   m_Name: cliff top1 (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2397,10 +2396,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 948351661}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -2424,7 +2423,7 @@ GameObject:
   - component: {fileID: 1037777453}
   m_Layer: 1
   m_Name: cliff top1 (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2594,8 +2593,9 @@ GameObject:
   - component: {fileID: 1098721823}
   - component: {fileID: 1098721822}
   - component: {fileID: 1098721821}
+  - component: {fileID: 1098721825}
   - component: {fileID: 1098721820}
-  m_Layer: 1
+  m_Layer: 8
   m_Name: A3
   m_TagString: alien
   m_Icon: {fileID: 0}
@@ -2617,6 +2617,7 @@ MonoBehaviour:
   speed: 0
   canMove: 0
   hasControl: 0
+  setControl: 0
 --- !u!23 &1098721821
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2683,8 +2684,23 @@ Transform:
   m_LocalScale: {x: 0.9, y: 1, z: 0.9}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
+--- !u!54 &1098721825
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1098721819}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1184283288
 GameObject:
   m_ObjectHideFlags: 0
@@ -2779,7 +2795,7 @@ GameObject:
   - component: {fileID: 1273728150}
   m_Layer: 1
   m_Name: cliff top1 (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2951,7 +2967,7 @@ GameObject:
   - component: {fileID: 1300787998}
   m_Layer: 1
   m_Name: cliff top1 (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3096,10 +3112,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1309316205}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -3142,7 +3158,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42d6593109565634bb1c2ae1a74264c9, type: 2}
+  - {fileID: 2100000, guid: 67365dd413280e64da1f4941a3720577, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3209,7 +3225,7 @@ GameObject:
   - component: {fileID: 1364775728}
   m_Layer: 1
   m_Name: cliff top1 (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3526,10 +3542,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1600667642}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -3612,10 +3628,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1637185255}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -3717,7 +3733,7 @@ Transform:
   - {fileID: 868593629}
   - {fileID: 1767786689}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &1687871883
 GameObject:
@@ -3818,7 +3834,7 @@ GameObject:
   - component: {fileID: 1752696468}
   m_Layer: 1
   m_Name: cliff top1 (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3904,7 +3920,7 @@ GameObject:
   - component: {fileID: 1767786690}
   m_Layer: 1
   m_Name: cliff top1 (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4009,7 +4025,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42d6593109565634bb1c2ae1a74264c9, type: 2}
+  - {fileID: 2100000, guid: 67365dd413280e64da1f4941a3720577, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4074,8 +4090,9 @@ GameObject:
   - component: {fileID: 1876458432}
   - component: {fileID: 1876458431}
   - component: {fileID: 1876458430}
+  - component: {fileID: 1876458434}
   - component: {fileID: 1876458429}
-  m_Layer: 1
+  m_Layer: 8
   m_Name: A2
   m_TagString: alien
   m_Icon: {fileID: 0}
@@ -4097,6 +4114,7 @@ MonoBehaviour:
   speed: 0
   canMove: 0
   hasControl: 0
+  setControl: 0
 --- !u!23 &1876458430
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4163,8 +4181,23 @@ Transform:
   m_LocalScale: {x: 0.9, y: 1, z: 0.9}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
+--- !u!54 &1876458434
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1876458428}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1882328401
 GameObject:
   m_ObjectHideFlags: 0
@@ -4259,7 +4292,7 @@ Transform:
   - {fileID: 1460117570}
   - {fileID: 660018674}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &1909788925
 GameObject:
@@ -4274,7 +4307,7 @@ GameObject:
   - component: {fileID: 1909788926}
   - component: {fileID: 1909788930}
   - component: {fileID: 1909788931}
-  m_Layer: 1
+  m_Layer: 8
   m_Name: A1
   m_TagString: alien
   m_Icon: {fileID: 0}
@@ -4364,6 +4397,7 @@ MonoBehaviour:
   speed: 0
   canMove: 0
   hasControl: 1
+  setControl: 0
 --- !u!54 &1909788931
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4392,7 +4426,7 @@ GameObject:
   - component: {fileID: 1945852007}
   m_Layer: 1
   m_Name: cliff top1 (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4478,7 +4512,7 @@ GameObject:
   - component: {fileID: 1985867536}
   m_Layer: 1
   m_Name: cliff top1 (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4623,10 +4657,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2004398175}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -4709,10 +4743,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2042892755}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -4755,7 +4789,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42d6593109565634bb1c2ae1a74264c9, type: 2}
+  - {fileID: 2100000, guid: 67365dd413280e64da1f4941a3720577, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4841,7 +4875,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 42d6593109565634bb1c2ae1a74264c9, type: 2}
+  - {fileID: 2100000, guid: 67365dd413280e64da1f4941a3720577, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4906,8 +4940,9 @@ GameObject:
   - component: {fileID: 2122066134}
   - component: {fileID: 2122066133}
   - component: {fileID: 2122066132}
+  - component: {fileID: 2122066136}
   - component: {fileID: 2122066131}
-  m_Layer: 1
+  m_Layer: 8
   m_Name: A4
   m_TagString: alien
   m_Icon: {fileID: 0}
@@ -4929,6 +4964,7 @@ MonoBehaviour:
   speed: 0
   canMove: 0
   hasControl: 0
+  setControl: 0
 --- !u!23 &2122066132
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4997,3 +5033,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
+--- !u!54 &2122066136
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2122066130}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

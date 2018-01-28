@@ -22,14 +22,15 @@ public class littleGuy: MonoBehaviour {
 	public bool hasControl;
 
 	//Collision Variables 
-
-
+	private littleGuy otherAlien; 
+	public bool setControl;
 
 	// Use this for initialization
 	void Start () {
 		moveNum = 20;
-		speed = 10;
+		speed = 20;
 		canMove = true;
+		setControl = false;
 
 	}
 	
@@ -37,8 +38,35 @@ public class littleGuy: MonoBehaviour {
 	void Update () {
 		//only move if the player has control of the unit 
 		if (hasControl) {
+			//always check for activating alien
+			activateAlien();
 			//Prevent player from moving before the units reach the end of their travel
 			if (canMove) {
+				//makes sure that the aliens stay on the grid
+
+				if (transform.position.x % 5 != 0) {
+					float newX = Mathf.Round(transform.position.x);
+					if ((Mathf.Round(transform.position.x) - 1) % 5 == 0) {
+						newX = Mathf.Round (transform.position.x - 1);
+					} else if ((Mathf.Round(transform.position.x) + 1) % 5 == 0) {
+						newX = Mathf.Round (transform.position.x + 1);
+					}
+					transform.position = new Vector2 (newX, transform.position.y);
+
+				}
+
+				if (transform.position.y % 5 != 0) {
+					float newY = Mathf.Round (transform.position.y);
+					if ((Mathf.Round (transform.position.y) - 1) % 5 == 0) {
+						newY = Mathf.Round (transform.position.y - 1);
+					} else if ((Mathf.Round (transform.position.y) + 1) % 5 == 0) {
+						newY = Mathf.Round (transform.position.y + 1);
+					}
+					transform.position = new Vector2 (transform.position.x, newY);
+				}
+
+
+				//player input 
 				if (Input.GetKeyDown (KeyCode.A)) {
 					MoveLeft ();
 				} else if (Input.GetKeyDown (KeyCode.D)) {
@@ -112,11 +140,15 @@ public class littleGuy: MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.tag == "wall" || other.gameObject.tag == "alien") {
+			//Debug.Log (other.gameObject.tag);
 			myPos = transform.position;
-			if (compareVector(myPos, currPos)) {
+			if (compareVector (myPos, currPos)) {
 				newPos = currPos;
-			} else if (compareVector(myPos, midPos)) {
+			} else if (compareVector (myPos, midPos)) {
 				newPos = midPos;
+			} else {
+				Debug.Log ("Reset Loc Failed");
+				//transform.position = new Vector2 (Mathf.Round (transform.position.x), Mathf.Round (transform.position.y));
 			}
 			currPos = transform.position;
 		}
@@ -128,11 +160,45 @@ public class littleGuy: MonoBehaviour {
 		float xDif = Mathf.Abs(v1.x - v2.x);
 		float yDif = Mathf.Abs (v1.y - v2.y);
 
-
-		if (xDif < 1 && yDif < 1) {
+		if (xDif < 5 && yDif < 5) {
 			return true;
 		} 
 		return false;
 
 	}
+
+	void activateAlien()
+	{
+		RaycastHit hit;
+		Debug.DrawRay (transform.position, transform.right * 8.0f, Color.green);
+
+		var layerMask = (1 << 8);
+
+		if (Physics.Raycast (transform.position, Vector3.left, out hit, 8.0f, layerMask, QueryTriggerInteraction.Collide)) {
+			alienCollision (hit);
+
+		} 
+		if (Physics.Raycast (transform.position, Vector3.right, out hit, 8.0f, layerMask, QueryTriggerInteraction.Collide)) {
+			alienCollision (hit);
+		
+		} 
+		if (Physics.Raycast (transform.position, Vector3.forward, out hit, 8.0f, layerMask, QueryTriggerInteraction.Collide)) {
+			alienCollision (hit);
+
+		} 
+		if (Physics.Raycast (transform.position, Vector3.back, out hit, 8.0f, layerMask, QueryTriggerInteraction.Collide)) {
+			alienCollision (hit);
+		}
+	}
+
+	void alienCollision (RaycastHit hit)
+	{
+		Debug.Log (hit.collider.name);
+		if (hit.collider.gameObject.tag == "alien") {
+			otherAlien = hit.collider.gameObject.GetComponent<littleGuy> ();
+			otherAlien.hasControl = true;
+		}
+	}
+
+
 }
