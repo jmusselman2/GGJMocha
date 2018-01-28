@@ -29,7 +29,7 @@ public class tutorialScript : MonoBehaviour {
 		} else if (triggers [1].isArea) {
 			text.text = "Now that everyone is awake, you can get to the escape pods! \n Make sure that each bot gets its own one!"; 
 		} else if (winCondition.hasWon) {
-			text.text = "You did it! Now go wake up the rest of the bots so you can get back home! \n press any key to coninue";
+			text.text = "You did it! Now go wake up the rest of the bots so you can get back home! \n press any key to continue";
 			if (Input.anyKeyDown) {
 				Application.LoadLevel ("Level1");
 			}
